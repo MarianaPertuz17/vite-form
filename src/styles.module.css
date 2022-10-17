@@ -13,3 +13,14 @@
   top: .5rem;
   right: .5rem;
 }
+
+.buttonContainer {
+  margin-top: 1rem;
+  display: flex;
+  gap: .5rem;
+  justify-content: flex-end;
+}
+
+button {
+  cursor: pointer;
+}
