@@ -39,7 +39,9 @@ function App() {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
-    next();
+    if (!isLastStep) return next();
+    alert('Successful Account Creation');
+    setData(INITIAL_DATA);
   }
 
   return (
