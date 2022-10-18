@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { AccountForm } from './components/accountForm'
+import { AddressForm } from './components/addressForm'
 import styles from './styles.module.css'
 import { useMultistepForm } from './useMultistepForm'
+import { UserForm } from './components/useForm'
 
 function App() {
 
-  const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } = useMultistepForm([<div>One</div>, <div>Two</div>, <div>Three</div>])
+  const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } = useMultistepForm([<UserForm/>, <AddressForm/>, <AccountForm/>])
 
   return (
     <div className={styles.container}>
