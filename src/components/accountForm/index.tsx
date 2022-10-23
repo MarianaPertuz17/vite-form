@@ -1,4 +1,5 @@
 import { FormWrapper } from "../formWrapper";
+import styles from './styles.module.css';
 
 type AccountData = {
   email: string,
