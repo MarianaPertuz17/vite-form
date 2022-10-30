@@ -45,17 +45,19 @@ function App() {
   }
 
   return (
-    <div className={styles.container}>
-      <form onSubmit={onSubmit}>
-        <div className={styles.number}>{currentStepIndex + 1} / {steps.length}</div>
-        {step}
-        <div className={styles.buttonContainer}>
-        {!isFirstStep && <button type='button' onClick={back}>Back</button>}
-        <button type='submit'>{!isLastStep ? 'Next' : 'Finish'}</button>
+    <div style={{width: '100vw', height: '100vh', backgroundColor: 'lightgray', display: 'flex', justifyContent:'center', alignItems:'center'}}>
+      <div className={styles.container}>
+        <form onSubmit={onSubmit}>
+          <div className={styles.number}>{currentStepIndex + 1} / {steps.length}</div>
+          {step}
+          <div className={styles.buttonContainer}>
+          {!isFirstStep && <button type='button' onClick={back}>Back</button>}
+          <button type='submit'>{!isLastStep ? 'Next' : 'Finish'}</button>
+        </div>
+        </form>
       </div>
-      </form>
-      
     </div>
+    
   )
 }
 
